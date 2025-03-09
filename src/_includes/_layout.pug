@@ -1,0 +1,35 @@
+- var DOMAIN = "https://xxxx.xxx/";
+- var BASE_DOMAIN = "https://xxxx.xxx/";
+- var DIR_ASSETS = BASE_DOMAIN + "/assets/";
+- var DIR_IMG = DIR_ASSETS + "img/";
+block vars
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{_title_str}
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content=_desc_str)
+    meta(name='keywords', content=_keys_str)
+    meta(property="og:title", content=_title_str)
+    meta(property="og:type", content="website")
+    meta(property="og:description", content=_desc_str)
+    meta(property="og:url", content=DOMAIN)
+    meta(property="og:image", content=DIR_IMG + "ogp.jpg")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0", user-scalable=yes')
+    link(rel='apple-touch-icon', href=DIR_IMG + "favicon.png")
+    link(rel='shortcut icon', href=DIR_IMG + 'favicon.png')
+    block link
+    script(src="/main.ts" type="module")
+  body
+    .wrapper
+      header.header
+
+      main
+        .container
+          block body
+
+      footer.footer
+
+    block script
