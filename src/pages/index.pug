@@ -1,0 +1,16 @@
+extends ../_includes/_layout.pug
+block title
+  title Index
+
+block style
+  style.
+    #canvas {
+      width:200px,
+      height:200px,
+    }
+block main
+  h1(class='p-4 text-blue-600 bg-gray-200 text-center') Hello World!
+  div(class='size-200 mx-auto')
+    canvas(id='canvas')
+
+  script(src='/pages/index.ts' type='module')

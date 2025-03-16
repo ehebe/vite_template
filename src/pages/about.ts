@@ -1,0 +1,2 @@
+import "../style/master.css";
+(() => {})();
